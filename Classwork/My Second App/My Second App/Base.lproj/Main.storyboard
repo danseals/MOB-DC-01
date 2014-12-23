@@ -25,11 +25,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRb-MB-Car">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Make an amazing iPhone app
+                                <string key="text">Make an amazing iPhone app
 &lt;something in here&gt;
 Profit!
 
-The original iPhone was introduced by Steve Jobs on January 9, 2007 in a keynote address at the Macworld Conference &amp; Expo held in Moscone West in San Francisco, California. In his address, Jobs said, "I have been looking forward to this for two and a half years", and that "today, Apple is going to reinvent the phone." Jobs introduced the iPhone as a combination of three devices: a "widescreen iPod with touch controls"; a "revolutionary mobile phone"; and a "breakthrough Internet communicator".</mutableString>
+The original iPhone was introduced by Steve Jobs on January 9, 2007 in a keynote address at the Macworld Conference &amp; Expo held in Moscone West in San Francisco, California. In his address, Jobs said, "I have been looking forward to this for two and a half years", and that "today, Apple is going to reinvent the phone." Jobs introduced the iPhone as a combination of three devices: a "widescreen iPod with touch controls"; a "revolutionary mobile phone"; and a "breakthrough Internet communicator".</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
