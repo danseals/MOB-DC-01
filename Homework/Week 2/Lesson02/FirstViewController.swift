@@ -9,6 +9,57 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    @IBOutlet weak var outputLabel: UILabel!
+    
+    @IBOutlet weak var nameTextBox: UITextField!
+    
+    @IBOutlet weak var ageTextBox: UITextField!
+    
+    @IBAction func generateButton(sender: AnyObject) {
+        helloWorld()
+        sayHello()
+        checkAge()
+        checkAgeAdvanced()
+    }
+    
+    func helloWorld() {
+        self.outputLabel.text = "hello world!"
+    }
+    
+    func sayHello() {
+        self.outputLabel.text = "Hello \(nameTextBox.text), you are \(ageTextBox.text) years old!"
+    }
+    
+
+    func checkAge() {
+        if ageTextBox.text.toInt() >= 21 {
+            self.outputLabel.text = "You can drink"
+        } else if ageTextBox.text.toInt() >= 18 {
+            self.outputLabel.text = "You can vote"
+        } else if ageTextBox.text.toInt() >= 16 {
+            self.outputLabel.text = "You can drive"
+        }
+    }
+    
+    func checkAgeAdvanced () {
+        if ageTextBox.text.toInt() >= 16 && ageTextBox.text.toInt() < 18 {
+            self.outputLabel.text = "You can drive"
+        } else if ageTextBox.text.toInt() >= 18 && ageTextBox.text.toInt() < 21 {
+            self.outputLabel.text = "You can drive and vote"
+        } else if ageTextBox.text.toInt() >= 21 {
+            self.outputLabel.text = "You can drive, vote and drink (but not at the same time!)"
+        }
+    }
+    
+    /* Questions:
+    
+1) How do I declare the UITextField "ageTextBox" to an Int so I don't have to use ".toInt()" every time, is this possible? 
+
+2) The directions say to print the "You can drive" etc. text under the other text, but my functions replace, how do I make it append the additional function below?
+
+    */
+
     /*
     TODO one: hook up a button in interface builder to a new function (to be written) in this class. Also hook up the label to this class. When the button is clicked, the function to be written must make a label say ‘hello world!’
     

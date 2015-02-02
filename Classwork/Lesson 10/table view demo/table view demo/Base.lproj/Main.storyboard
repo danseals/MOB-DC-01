@@ -58,6 +58,7 @@
         <!--Add View Controller-->
         <scene sceneID="rgg-iq-CTz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBI-oQ-hcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="addVC" id="hcu-dS-bgk" customClass="AddViewController" customModule="table_view_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8op-JZ-sJ2"/>
@@ -106,7 +107,6 @@
                         <outlet property="addTextBox" destination="hFq-gT-XCY" id="YTu-ZL-bEh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MBI-oQ-hcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3034.5" y="352"/>
         </scene>

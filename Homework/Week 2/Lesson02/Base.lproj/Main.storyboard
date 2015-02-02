@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LUb-Ej-wn6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LUb-Ej-wn6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -69,6 +69,9 @@
                                 <state key="normal" title="Generate text!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="generateButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kb0-72-rGG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -90,6 +93,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageTextBox" destination="HD3-Of-BAd" id="pXe-8e-a6M"/>
+                        <outlet property="nameTextBox" destination="dvu-Gz-gU3" id="ZVW-TX-lq5"/>
+                        <outlet property="outputLabel" destination="v2W-sh-fBn" id="aFR-3o-7mp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,6 +143,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addNumber:" destination="DXI-gN-4Tg" eventType="touchUpInside" id="lOg-HL-spC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,14 +165,19 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="numberBox" destination="dsS-73-FSq" id="7Zj-VO-Owj"/>
+                        <outlet property="numberDisplay" destination="qiz-6d-s2d" id="C9K-wf-eFU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFb-9H-Aa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="-292"/>
+            <point key="canvasLocation" x="1382" y="-290"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="iRJ-Jo-rYs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bic-8V-fDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="nKH-F5-XzW" customClass="ThirdViewController" customModule="Lesson02" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LeC-j6-CTd"/>
@@ -190,26 +206,36 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVV-GO-Y1O">
-                                <rect key="frame" x="268" y="169" width="65" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gw1-1Y-Szi"/>
-                                    <constraint firstAttribute="width" constant="65" id="jK1-0l-6JY"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWX-Vb-sJc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="168" y="184" width="65" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="calculateEven:" destination="nKH-F5-XzW" eventType="touchUpInside" id="dIe-yy-U9J"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="aVV-GO-Y1O" secondAttribute="centerX" id="LZX-Tm-pij"/>
                             <constraint firstAttribute="centerX" secondItem="y0y-Zz-8RE" secondAttribute="centerX" id="OV4-O1-y6e"/>
-                            <constraint firstItem="aVV-GO-Y1O" firstAttribute="top" secondItem="y0y-Zz-8RE" secondAttribute="bottom" constant="8" id="Vun-0Z-3Kf"/>
                             <constraint firstItem="y0y-Zz-8RE" firstAttribute="top" secondItem="UJA-B5-7Cz" secondAttribute="bottom" constant="15" id="WoP-ue-r85"/>
                             <constraint firstAttribute="centerX" secondItem="UJA-B5-7Cz" secondAttribute="centerX" id="hqd-sw-hA8"/>
                             <constraint firstItem="UJA-B5-7Cz" firstAttribute="top" secondItem="LeC-j6-CTd" secondAttribute="bottom" constant="31" id="pbk-x8-O1X"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wWX-Vb-sJc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wWX-Vb-sJc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="MSB-HX-b5c">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="2QZ-gn-Ycc">
@@ -218,10 +244,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="isEvenOrNot" destination="y0y-Zz-8RE" id="MK7-Zl-AGy"/>
+                        <outlet property="numberEntered" destination="UJA-B5-7Cz" id="4jF-wq-wyO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bic-8V-fDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068" y="-300"/>
+            <point key="canvasLocation" x="2046" y="-290"/>
         </scene>
         <!--Fourth View Controller-->
         <scene sceneID="aee-Lw-ved">
@@ -253,6 +282,9 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="calcuateFib:" destination="BPG-Q0-b6p" eventType="touchUpInside" id="vGl-WJ-qwh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should print the xth fibonacci number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpk-q1-6qc">
                                 <rect key="frame" x="155" y="138" width="290" height="21"/>
@@ -275,6 +307,10 @@
                             <constraint firstItem="uuM-Ik-raV" firstAttribute="top" secondItem="Hpk-q1-6qc" secondAttribute="bottom" constant="21" id="scm-VI-6lk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fibNumberLabel" destination="Hpk-q1-6qc" id="MRz-Aa-f0f"/>
+                        <outlet property="fibPlaceRequested" destination="Y9T-1j-GS4" id="Q5R-Ir-97B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LL4-Hq-ZaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
