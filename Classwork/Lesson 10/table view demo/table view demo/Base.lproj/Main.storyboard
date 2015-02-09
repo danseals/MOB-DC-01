@@ -58,7 +58,6 @@
         <!--Add View Controller-->
         <scene sceneID="rgg-iq-CTz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MBI-oQ-hcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="addVC" id="hcu-dS-bgk" customClass="AddViewController" customModule="table_view_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8op-JZ-sJ2"/>
@@ -88,25 +87,66 @@
                                     <rect key="frame" x="55" y="91" width="290" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your text field is empty, enter something." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjF-j1-pWF">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="44" y="156" width="313" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hidden label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXQ-In-MYI">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="153" y="304" width="94" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQN-GP-vXo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Post Notification">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="88" y="446" width="225" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pressPostButton:" destination="hcu-dS-bgk" eventType="touchUpInside" id="aaC-AA-e6g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="azl-qB-S29"/>
                                 <exclude reference="hFq-gT-XCY"/>
+                                <exclude reference="AjF-j1-pWF"/>
+                                <exclude reference="bXQ-In-MYI"/>
+                                <exclude reference="IQN-GP-vXo"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="azl-qB-S29"/>
                                 <include reference="hFq-gT-XCY"/>
+                                <include reference="AjF-j1-pWF"/>
+                                <include reference="bXQ-In-MYI"/>
+                                <include reference="IQN-GP-vXo"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="addTextBox" destination="hFq-gT-XCY" id="YTu-ZL-bEh"/>
+                        <outlet property="errorMessage" destination="AjF-j1-pWF" id="6GS-U0-GuF"/>
+                        <outlet property="hiddenLabel" destination="bXQ-In-MYI" id="8Tz-Sn-BgB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBI-oQ-hcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3034.5" y="352"/>
         </scene>

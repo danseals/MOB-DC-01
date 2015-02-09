@@ -21,7 +21,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="78" y="427" width="244" height="30"/>
+                                    <rect key="frame" x="78" y="231" width="244" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-gg-2aL">
@@ -30,7 +30,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="169" y="502" width="62" height="30"/>
+                                    <rect key="frame" x="169" y="285" width="62" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="addItemToDoList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G2m-mY-5Gq"/>
@@ -82,7 +82,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdF-0r-WPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339.5" y="351"/>
+            <point key="canvasLocation" x="1280" y="424"/>
         </scene>
     </scenes>
 </document>

@@ -14,12 +14,12 @@ class ViewController: UIViewController {
     var toDoList = ["Buy milk", "Buy Bread", "Mow the Lawn", "Pick up Charlie", "Do the dishes."]
 
     
-//    @IBOutlet weak var itemToAdd: UITextField!
-//    
-//    @IBAction func addItemToDoList(sender: AnyObject) {
-//        toDoList.append(itemToAdd)
-//        
-//    }
+    @IBOutlet weak var itemToAdd: UITextField!
+    
+    @IBAction func addItemToDoList(sender: AnyObject) {
+        toDoList.append(itemToAdd)
+        
+    }
     
     override func viewDidLoad() {
         

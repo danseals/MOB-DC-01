@@ -12,9 +12,13 @@ protocol Campus {
     func addCampusToArray(campusName: String)
 }
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var addTextBox: UITextField!
+    
+    @IBOutlet weak var errorMessage: UILabel!
+    
+    @IBOutlet weak var hiddenLabel: UILabel!
     
     var delegate: Campus?
     
@@ -23,11 +27,46 @@ class AddViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+
+    @IBAction func pressPostButton(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("unhideHiddenlabels", object: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addTextBox.delegate = self
+        self.errorMessage.hidden = true
+        self.hiddenLabel.hidden = true
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                selector: "unhideCurrentLabels:",
+                name: "unhideHiddenlabels",
+                object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                selector: "textHasChanged:",
+                name: "UITextFieldTextDidChangeNotification",
+                object: nil)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textHasChanged(NSNotification) {
+        println("Hooray, text has changed!")
+    }
+    
+    func unhideCurrentLabels(nofication: NSNotification) {
+        self.hiddenLabel.hidden = false
+        println("Trigger unhideHiddenlabels Notification")
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if self.addTextBox.text.isEmpty {
+            println("Your text field is empty, enter something!")
+            textField.resignFirstResponder()
+            self.errorMessage.hidden = false
+        } else {
+            self.errorMessage.hidden = true
+        }
+        return true
     }
 
     override func didReceiveMemoryWarning() {
